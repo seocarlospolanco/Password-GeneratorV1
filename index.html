@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Passwords Generator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <link rel="stylesheet"  type="text/css" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="topSection">
+        <h1 class="heading">Generate a <h1 style="color: #10B981;margin-top: 0; margin-bottom: 5px;">random password</h1></h1>
+        <span class="subtitle">Never use an insecure password again.</span>
+        </div>
+
+        <section class="lowSection">
+            <button class="button" style="background-color: transparent;border: 0;padding: 0;" onclick="copyContent()"><section class="boxPasswords" id="stageone"></section></button>
+            <button class="button" style="background-color: transparent;border: 0;padding: 0;" onclick="copyContentTwo()"><section class="boxPasswords" id="stagetwo" ></section></button>
+            </section>
+        <div class="lines"></div>
+        <div class="midSection">
+            <input type="text" id="numberofchar" class="Input-text" placeholder="8-18" style="width: 34px;height: 47px;margin-left: 20px;border: 0;background-color: #273549;border-radius: 8px;color: #47ef92;font-size: 17px;padding-left: 11px;
+            padding-right: 10px;
+            margin-right: 10px;">
+            <button class="button" id="generatePasswords" onclick="generator()">Generate passwords</button>
+            </div>
+        <span id="notcool" style="text-align: center; display: block;margin-top: 11px; color: red;"></span>
+        <script src="js/index.js"></script>
+    </body>
+</html>

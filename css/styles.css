@@ -1,0 +1,145 @@
+body {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background: #dbf1e7;
+    font-family: 'Karla', sans-serif;
+}
+
+.heading{
+font-style: normal;
+font-weight: 800;
+font-size: 40px;
+line-height: 40px;
+letter-spacing: -0.05em;
+color: #2B283A;
+margin-bottom: 0;
+}
+
+.topSection{
+    width: 100%;
+    margin-left: 30px;
+    margin-top: 125px;
+    margin-bottom: 50px;
+}
+
+.midSection{
+    width: 100%;
+    display: flex;
+}
+
+.lowSection{
+    width: 100%;
+    margin-left: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+@media screen and (min-width: 350px) { 
+        .lowSection{
+            flex-direction: column;
+        }
+   }
+
+   @media screen and (min-width: 500px) { 
+    .lowSection{
+        flex-direction: row;
+    }
+}
+
+
+.lines{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border: 1px solid #D5D4D8;
+}
+
+div{
+    position: relative
+}
+
+div.boxPasswords{
+    display: flex;
+    align-self: flex-end;
+}
+
+
+
+.boxPasswords{
+width: 211px;
+height: 39px;
+margin-bottom: 5px;
+background: #273549;
+border-radius: 6px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 32px;
+text-align: center;
+color: #5DEF92;
+padding-top: 6px;
+}
+
+#generatePasswords{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9px 17px 9px 15px;
+gap: 12px;
+width: 240px;
+height: 50px;
+background: #10B981;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+border-radius: 6px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 19px;
+border: 0;
+margin-bottom: 10px;
+color: white;
+}
+
+.subtitle{
+font-family: 'Inter';
+font-style: normal;
+color: #6B7280;
+font-size: 17px;
+}
+
+.button {
+    position: relative;
+    background-color: #04AA6D;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
