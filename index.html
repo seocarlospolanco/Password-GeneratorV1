@@ -11,14 +11,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
     </head>
     <body>
+        <main>
         <div class="topSection">
         <h1 class="heading">Generate a <h1 style="color: #10B981;margin-top: 0; margin-bottom: 5px;">random password</h1></h1>
         <span>Never use an insecure password again.</span>
         </div>
 
         <section class="lowSection">
-            <button class="button" style="background-color: transparent;border: 0;padding: 0;width: 69%;" onclick="copyContent()"><section class="boxPasswords" id="stageone"></section></button>
-            <button class="button" style="background-color: transparent;border: 0;padding: 0;width: 69%;" onclick="copyContentTwo()"><section class="boxPasswords" id="stagetwo" ></section></button>
+            <button class="button" style="background-color: transparent;border: 0;padding: 0;" onclick="copyContent()"><section class="boxPasswords" id="stageone"></section></button>
+            <button class="button" style="background-color: transparent;border: 0;padding: 0;" onclick="copyContentTwo()"><section class="boxPasswords" id="stagetwo" ></section></button>
             </section>
         <div class="lines"></div>
         <div class="midSection">
@@ -26,8 +27,9 @@
             margin-right: 10px;">
             <button class="button" id="generatePasswords" onclick="generator()">Generate passwords</button>
             </div>
-            <button id="toggleDarkMode" onclick="myFunction()"><img id="lightDarkIcon" alt=""/></button>
+            <button class="toggleDarkModes" id="toggleDarkMode" onclick="myFunction()"><img id="lightDarkIcon" alt=""/></button>
         <span id="notcool" style="text-align: center; display: block;margin-top: 11px; color: red;"></span>
+    </main>
         <script>
             function myFunction() {
                var element = document.body;

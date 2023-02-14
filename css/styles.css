@@ -38,17 +38,41 @@ margin-bottom: 0;
     margin-left: 30px;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 @media screen and (min-width: 350px) { 
         .lowSection{
-            flex-direction: column;
+            /*flex-direction: column;*/
         }
    }
 
    @media screen and (min-width: 500px) { 
     .lowSection{
         flex-direction: row;
+    }
+}
+
+@media screen and (min-height: 600px) { 
+    .toggleDarkModes{
+        bottom: 14px;
+        left: 290px;
+        width: 66px;
+    }
+}
+
+@media screen and (min-width: 1700px) { 
+    .toggleDarkModes{
+        bottom: 465px;
+        left: 1354px;
+        width: 66px;
+    }
+}
+
+@media screen and (min-width: 1700px) { 
+    main{
+        margin-left: 600px;
     }
 }
 
@@ -156,11 +180,8 @@ font-size: 17px;
     transition: 0s
   }
 
-  #toggleDarkMode{
+  .toggleDarkModes{
     position: fixed;
-    bottom: 73px;
-    left: 271px;
-    width: 20%;
     height: 55px;
     font-size: 14px;
     border-radius: 100px;
@@ -202,12 +223,12 @@ font-size: 17px;
 
   img {
     content:url(https://zippy-muffin-39d28b.netlify.app/media/moon-solid.svg);
-    width:50%;
+    width:30px;
  }
  
  .lightDarkIconTwo {
     content:url(https://zippy-muffin-39d28b.netlify.app/media/sun-regular.svg);
-    width:60%;
+    width:30px;
     padding-top: 0px;
  }
 
