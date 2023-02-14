@@ -164,7 +164,29 @@ font-size: 17px;
     height: 55px;
     font-size: 14px;
     border-radius: 100px;
-    background-color: #ffffff;
+    background-color: #9ab6dd;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .toggleDarkMde{
+    position: fixed;
+    bottom: 73px;
+    left: 271px;
+    width: 20%;
+    height: 55px;
+    font-size: 14px;
+    border-radius: 100px;
+    background-color: #161616;
     border: none;
     font-size: 28px;
     color: #FFFFFF;
