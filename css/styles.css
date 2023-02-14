@@ -161,10 +161,10 @@ font-size: 17px;
     bottom: 73px;
     left: 271px;
     width: 20%;
-    height: 45px;
+    height: 55px;
     font-size: 14px;
     border-radius: 100px;
-    background-color: #04AA6D;
+    background-color: #ffffff;
     border: none;
     font-size: 28px;
     color: #FFFFFF;
@@ -186,6 +186,7 @@ font-size: 17px;
  .lightDarkIconTwo {
     content:url(https://zippy-muffin-39d28b.netlify.app/media/sun-regular.svg);
     width:50%;
+    padding-top: 10px;
  }
 
  /* https://uxwing.com/wp-content/themes/uxwing/download/nature-and-environment/moon-icon.png
