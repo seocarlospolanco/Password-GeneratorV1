@@ -19,14 +19,22 @@
 
         <section class="lowSection">
             <button class="button" style="background-color: transparent;border: 0;padding: 0;" onclick="copyContent()"><section class="boxPasswords" id="stageone"></section></button>
+            <i class="fa-solid fa-copy" onclick="copyContent()"></i>
             <button class="button" style="background-color: transparent;border: 0;padding: 0;" onclick="copyContentTwo()"><section class="boxPasswords" id="stagetwo" ></section></button>
+            <i  class="fa-solid fa-copy" onclick="copyContent()"></i>
             </section>
         <div class="lines"></div>
         <div class="midSection">
-            <input type="number" id="numberofchar" class="Input-text" placeholder="8-18" style="width: 50px;height: 47px;margin-left: 20px;border: 0;background-color: #273549;border-radius: 8px;color: #47ef92;font-size: 17px;padding-left: 11px;
-            margin-right: 10px;">
             <button class="button" id="generatePasswords" onclick="generator()">Generate passwords</button>
+            <div class="inputs">
+                <input type="range" value="14" min="8" max="28" id="range" oninput="rangenumber.value=value"/>
+                <input type="number" id="rangenumber" min="8" max="28" value="14" oninput="range.value=value">
+                </div>
             </div>
+            <!-- ><input type="range" min="8" max="18" value="8" class="slider" id="myRange">
+            <p>Characters: <span id="character"></span></p>
+            <input  type="number" id="numberofchar" class="Input-text" placeholder="8-18" style="width: 50px;height: 47px;margin-left: 20px;border: 0;background-color: #273549;border-radius: 8px;color: #47ef92;font-size: 17px;padding-left: 11px;
+            margin-right: 10px;" oninput="myRange.value=value"> -->
             <button class="toggleDarkModes" id="toggleDarkMode" onclick="myFunction()"><img id="lightDarkIcon" alt=""/></button>
         <span id="notcool" style="text-align: center; display: block;margin-top: 11px; color: red;"></span>
     </main>
@@ -40,6 +48,16 @@
                 img.classList.toggle('lightDarkIconTwo')
             }
             </script>
+            <script>
+                var slider = document.getElementById("myRange");
+                var output = document.getElementById("character")
+                output.innerHTML = slider.value;
+
+                slider.oninput = function() {
+                    output.innerHTML = this.value;
+                }
+            </script>
+            <script src="https://kit.fontawesome.com/f047247ed3.js" crossorigin="anonymous"></script>
         <script src="js/index.js"></script>
     </body>
 </html>

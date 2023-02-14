@@ -11,8 +11,8 @@ let passWordTwo = document.getElementById("stagetwo")
 
 
 /*generatePasswords.addEventListener("click", function(){
-    let input = document.getElementById("numberofchar")
-    input = parseInt(numberofchar.value)
+    let input = document.getElementById("myrange")
+    input = parseInt(myrange.value)
         if (input > 8){
             generator()
          } else {
@@ -60,8 +60,10 @@ function generator(){
     let wordIndxSevenTeen = Math.floor( Math.random() * characters.length )
     let wordIndxEightTeen = Math.floor( Math.random() * characters.length )
 
-    let input = document.getElementById("numberofchar")
-    input = parseInt(numberofchar.value)
+    /* input box to control slider */
+
+    let input = document.getElementById("range").value;
+    input = parseInt(range.value)
         if (input === 8){         
             let eror = document.getElementById("notcool")
                                                     eror.textContent =""   
@@ -133,6 +135,8 @@ function generator(){
     
 }
 
+/* Copy Function */
+
 let text = document.getElementById("stageone");
 const copyContent = async () => {
     try {
@@ -152,3 +156,28 @@ const copyContentTwo = async () => {
       console.error('Failed to copy: ', err);
     }
   }
+
+  /* End */
+
+  /* Input Script */
+
+  const rangeInputs = document.querySelectorAll('input[type="range"]')
+const numberInput = document.querySelector('input[type="number"]')
+
+function handleInputChange(e) {
+  let target = e.target
+  if (e.target.type !== 'range') {
+    target = document.getElementById('range')
+  } 
+  const min = target.min
+  const max = target.max
+  const val = target.value
+  
+  target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
+}
+
+rangeInputs.forEach(input => {
+  input.addEventListener('input', handleInputChange)
+})
+
+numberInput.addEventListener('input', handleInputChange)
