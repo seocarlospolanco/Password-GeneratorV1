@@ -13,7 +13,7 @@
     <body>
         <div class="topSection">
         <h1 class="heading">Generate a <h1 style="color: #10B981;margin-top: 0; margin-bottom: 5px;">random password</h1></h1>
-        <span class="subtitle">Never use an insecure password again.</span>
+        <span>Never use an insecure password again.</span>
         </div>
 
         <section class="lowSection">
@@ -26,7 +26,18 @@
             margin-right: 10px;">
             <button class="button" id="generatePasswords" onclick="generator()">Generate passwords</button>
             </div>
+            <button id="toggleDarkMode" onclick="myFunction()"><img id="lightDarkIcon" alt=""/></button>
         <span id="notcool" style="text-align: center; display: block;margin-top: 11px; color: red;"></span>
+        <script>
+            function myFunction() {
+               var element = document.body;
+               element.classList.toggle("dark-mod");
+                const span = document.querySelector ('span');
+                span.classList.toggle('subtitle');
+                const img = document.querySelector('img');
+                img.classList.toggle('lightDarkIconTwo')
+            }
+            </script>
         <script src="js/index.js"></script>
     </body>
 </html>
