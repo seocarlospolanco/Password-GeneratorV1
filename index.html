@@ -12,8 +12,15 @@
     </head>
     <body>
         <main>
+            <nav>
+                <ul>
+                    <li>Github</li>
+                    <li>Contact</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </nav>              
         <div class="topSection">
-        <h1 class="heading">Generate a <h1 style="color: #10B981;margin-top: 0; margin-bottom: 5px;">random password</h1></h1>
+        <h1 id="heads" class="heading">Generate a <h1 style="color: #10B981;margin-top: 0; margin-bottom: 5px;">random password</h1></h1>
         <span>Never use an insecure password again.</span>
         </div>
 
@@ -32,20 +39,20 @@
                 </div>
             </div>
             <div class="checkBoxesOptions">
-                <input style="margin-top: 10px;margin-left: 30px;" type="checkbox" id="lowerCase" checked="true">
+                <input style="margin-top: 10px;margin-left: 30px;" type="checkbox" value="lowercase" id="lowerCase">
                 <label>Lowercase</label>
             </div>
             <div class="checkBoxesOptions">
-                <input style="margin-top: 10px;margin-left: 30px;" type="checkbox" id="lowerCase" checked="true">
+                <input style="margin-top: 10px;margin-left: 30px;" type="checkbox" value="uppercase" id="uppercase">
                 <label>Uppercase</label>
             </div>
             <div class="checkBoxesOptions">
-                <input style="margin-top: 10px;margin-left: 30px;" type="checkbox" id="lowerCase" checked="true">
+                <input style="margin-top: 10px;margin-left: 30px;" type="checkbox" value="numbers" id="numbers">
                 <label>Numbers</label>
             </div>
             <div class="checkBoxesOptions">
-                <input style="margin-top: 10px;margin-left: 30px;" type="checkbox" id="lowerCase" checked="true">
-                <label>Randomized symbols</label>
+                <input style="margin-top: 10px;margin-left: 30px;" type="checkbox" value="symbols" id="simbolos">
+                <label>Symbols</label>
             </div>
             <!-- ><input type="range" min="8" max="18" value="8" class="slider" id="myRange">
             <p>Characters: <span id="character"></span></p>
@@ -64,6 +71,8 @@
                 img.classList.toggle('lightDarkIconTwo')
                 const input = document.querySelector('lowerCase');
                 img.classList.toggle('subtitle')
+                const nav = document.querySelector ('nav');
+                nav.classList.toggle('il')
             }
             </script>
             <script>
@@ -74,6 +83,10 @@
                 slider.oninput = function() {
                     output.innerHTML = this.value;
                 }
+            </script>
+            <script>
+
+
             </script>
             <script src="https://kit.fontawesome.com/f047247ed3.js" crossorigin="anonymous"></script>
         <script src="js/index.js"></script>
