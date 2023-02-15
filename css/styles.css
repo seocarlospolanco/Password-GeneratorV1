@@ -136,6 +136,7 @@ nav {
     margin-top: 50px;
     margin-bottom: 30px;
     border: 1px solid #D5D4D8;
+    max-width: 700px;
 }
 
 div{
