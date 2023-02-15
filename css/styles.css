@@ -331,6 +331,9 @@ input[type="number"] {
   font-family: 'Karla';
 }
 
+a { color: inherit; } 
+
+
 /* input[type="range"]:focus,
 input[type="number"]:focus {
   box-shadow: 0 0 3px 1px #4b81dd;
@@ -348,6 +351,23 @@ input[type="range"] {
   background-size: 50% 100%;
   background-repeat: no-repeat;
 }
+
+label {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+input[type="checkbox"] {
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.35em;
+  height: 1.35em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+}
+
 
 /* Input Thumb */
 input[type="range"]::-webkit-slider-thumb {
