@@ -27,8 +27,6 @@
         <section class="lowSection">
             <button class="button" style="background-color: transparent;border: 0;padding: 0;" onclick="copyContent()"><section class="boxPasswords" id="stageone"></section></button>
             <i class="fa-solid fa-copy" onclick="copyContent()"></i>
-            <button class="button" style="background-color: transparent;border: 0;padding: 0;" onclick="copyContentTwo()"><section class="boxPasswords" id="stagetwo" ></section></button>
-            <i  class="fa-solid fa-copy" onclick="copyContent()"></i>
             </section>
         <div class="lines"></div>
         <div class="midSection">
@@ -68,7 +66,8 @@ const includeNumbersCheckbox = document.getElementById('numbers');
 const includeLowercaseCheckbox = document.getElementById('lowerCase');
 const includeUppercaseCheckbox = document.getElementById('uppercase');
 const generateButton = document.getElementById('generatePasswords');
-const passwordOutput = document.getElementById('stageone');
+const passwordOutput = document.getElementById('passwordOutput');
+const passwordOutputTwo = document.getElementById('stageone');
 
 generateButton.addEventListener('click', generatePassword);
 
@@ -91,7 +90,8 @@ function generatePassword() {
     password += characterSet.charAt(Math.floor(Math.random() * characterSet.length));
   }
   
-  passwordOutput.value = password;
+  
+  passwordOutputTwo.textContent = password;
 }
     </script>
         <script>
@@ -122,5 +122,46 @@ function generatePassword() {
 
             </script>
             <script src="https://kit.fontawesome.com/f047247ed3.js" crossorigin="anonymous"></script>
+            <script>
+                let text = document.getElementById("stageone");
+const copyContent = async () => {
+    try {
+        await navigator.clipboard.writeText(text.innerText), console.log("Content copied to clipboard")
+    } catch (a) {
+        console.error("Failed to copy: ", a)
+    }
+};
+let textTwo = document.getElementById("stagetwo");
+const copyContentTwo = async () => {
+        try {
+            await navigator.clipboard.writeText(textTwo.innerText), console.log("Content copied to clipboard")
+        } catch (a) {
+            console.error("Failed to copy: ", a)
+        }
+    },
+    rangeInputs = document.querySelectorAll('input[type="range"]'),
+    numberInput = document.querySelector('input[type="number"]');
+
+function handleInputChange(a) {
+    let r = a.target;
+    "range" !== a.target.type && (r = document.getElementById("range"));
+    const t = r.min,
+        h = r.max,
+        c = r.value;
+    r.style.backgroundSize = 100 * (c - t) / (h - t) + "% 100%"
+}
+rangeInputs.forEach((a => {
+    a.addEventListener("input", handleInputChange)
+})), numberInput.addEventListener("input", handleInputChange);
+let radioBtns = document.querySelectorAll("input[name='fruit']"),
+    result = document.getElementById("result"),
+    findSelected = () => {
+        document.querySelector("input[name='fruit']:checked").value;
+        result.textContent = "Value of selected button: ${selected}"
+    };
+radioBtns.forEach((a => {
+    a.addEventListener("change", findSelected)
+})), findSelected();
+            </script>
     </body>
 </html>
