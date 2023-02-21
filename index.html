@@ -32,26 +32,26 @@
             </section>
         <div class="lines"></div>
         <div class="midSection">
-            <button class="button" id="generatePasswords"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button class="button" id="generatePasswords" onclick="generatePassword()"><i class="fa-solid fa-arrows-rotate"></i></button>
             <div class="inputs">
                 <input type="range" value="14" min="8" max="20" id="range" oninput="rangenumber.value=value"/>
                 <input type="number" id="rangenumber" min="8" max="20" value="14" oninput="range.value=value">
                 </div>
             </div>
             <div class="checkBoxesOptions" style="margin-top: 21px;margin-left: 5px;">
-                <input style="margin-top: -5px;margin-left: 30px;" type="checkbox" value="lowercase" id="lowerCase" checked>
+                <input style="margin-top: -5px;margin-left: 30px;" type="checkbox" id="lowerCase" checked>
                 <label>Lowercase</label>
             </div>
             <div class="checkBoxesOptions"  style="margin-left: 5px;">
-                <input style="margin-top: -5px;margin-left: 30px;" type="checkbox" value="uppercase" id="uppercase" checked>
+                <input style="margin-top: -5px;margin-left: 30px;" type="checkbox" id="uppercase" checked>
                 <label>Uppercase</label>
             </div>
             <div class="checkBoxesOptions" style="margin-left: 5px;">
-                <input style="margin-top: -5px;margin-left: 30px;" type="checkbox" value="numbers" id="numbers" checked>
+                <input style="margin-top: -5px;margin-left: 30px;" type="checkbox" id="numbers" checked>
                 <label>Numbers</label>
             </div>
             <div class="checkBoxesOptions" style="margin-left: 5px;">
-                <input style="margin-top: -5px;margin-left: 30px;" type="checkbox" value="symbols" id="simbolos" checked>
+                <input style="margin-top: -5px;margin-left: 30px;" type="checkbox"id="simbolos" checked>
                 <label>Symbols</label>
             </div>
             <!-- ><input type="range" min="8" max="18" value="8" class="slider" id="myRange">
