@@ -87,7 +87,7 @@ function generatePassword() {
   if (includeUppercase) characterSet += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   
   for (let i = 0; i < passwordLength; i++) {
-    password += characterSet.charAt(Math.floor(Math.random() * characterSet.length));
+    password += characterSet[Math.floor(Math.random() * characterSet.length)];
   }
   
   
