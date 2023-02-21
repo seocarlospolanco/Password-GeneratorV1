@@ -61,6 +61,39 @@
             <button class="toggleDarkModes" id="toggleDarkMode" onclick="myFunction()"><img id="lightDarkIcon" alt=""/></button>
         <span id="notcool" style="text-align: center; display: block;margin-top: 11px; color: red;"></span>
     </main>
+    <script>
+const passwordLengthRange = document.getElementById('range');
+const includeSymbolsCheckbox = document.getElementById('simbolos');
+const includeNumbersCheckbox = document.getElementById('numbers');
+const includeLowercaseCheckbox = document.getElementById('lowerCase');
+const includeUppercaseCheckbox = document.getElementById('uppercase');
+const generateButton = document.getElementById('generatePasswords');
+const passwordOutput = document.getElementById('stageone');
+
+generateButton.addEventListener('click', generatePassword);
+
+function generatePassword() {
+  const passwordLength = passwordLengthRange.value;
+  const includeSymbols = includeSymbolsCheckbox.checked;
+  const includeNumbers = includeNumbersCheckbox.checked;
+  const includeLowercase = includeLowercaseCheckbox.checked;
+  const includeUppercase = includeUppercaseCheckbox.checked;
+  
+  let characterSet = '';
+  let password = '';
+  
+  if (includeSymbols) characterSet += '!@#$%^&*()_+-={}[]|\\:;"\'<>,.?/';
+  if (includeNumbers) characterSet += '0123456789';
+  if (includeLowercase) characterSet += 'abcdefghijklmnopqrstuvwxyz';
+  if (includeUppercase) characterSet += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  
+  for (let i = 0; i < passwordLength; i++) {
+    password += characterSet.charAt(Math.floor(Math.random() * characterSet.length));
+  }
+  
+  passwordOutput.value = password;
+}
+    </script>
         <script>
             function myFunction() {
                var element = document.body;
